@@ -9,7 +9,12 @@
 <body>
 	
 	<script type="module">
-		import init, { unic_vec, concat_object, sleep } from "./pkg/hello_wasm.js"
+		import init, { 
+			unic_vec,
+			concat_object,
+			add,
+			sleep,
+		} from "./pkg/hello_wasm.js"
 		await init();
 
 		// Задание 1
@@ -28,9 +33,10 @@
 		console.log(concat_object(obj, obj2));
 
 		// Задание 3
-		const add = (a, b) => {
-			return a + b;
-		}
+		// const add = (a, b) => {
+		// 	return a + b;
+		// }
+		console.log(add(3, 5));
 
 		// Задание 4
 		sleep(5000).then(() => {
